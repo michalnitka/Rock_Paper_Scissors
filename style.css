@@ -1,0 +1,162 @@
+/* color: #8C4B45;
+#313236;
+#DEC6AA;
+#D0D1CC;
+#BD5963; */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: roboto, sans-serif;
+    height: 100vh;
+    width: 100vw;
+    color: #313236;
+}
+
+header {
+    width: 100%;
+    height: 15vh;
+    background-color: #DEC6AA;
+}
+
+header h1 {
+    text-align: center;
+    line-height: 122px;
+
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 85vh;
+}
+
+main div {
+    width: 34%;
+    text-align: center;
+}
+
+div.userBoard,
+div.compBoard {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #D0D1CC;
+}
+
+div.userBoard div,
+div.compBoard div {
+    position: relative;
+    height: 150px;
+    width: 150px;
+    background-color: #fff;
+    border: 2px solid black;
+    border-radius: 50%;
+
+}
+
+
+div.userBoard div:hover {
+    background-color: #565755;
+    cursor: pointer;
+}
+
+div.userBoard div.active,
+div.compBoard div.active {
+    border: 5px solid #E0C882;
+}
+
+
+.img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 50%;
+}
+
+.compBoard img {
+    transform: translate(-50%, -50%) rotateY(180deg);
+}
+
+.mainBoard {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.scoreBoard {
+    font-size: 50px;
+}
+
+.picBoard {
+    position: relative;
+    width: 380px;
+    height: 200px;
+    border: 3px solid black;
+}
+
+.user,
+.comp {
+    position: absolute;
+    top: 50%;
+    width: auto;
+    transform: translate(0, -50%);
+    background-color: #BD5963;
+    border: 1px solid black;
+    padding: 2px 5px;
+    color: #FADFBF;
+}
+
+.user {
+    left: -10%;
+}
+
+.comp {
+    right: -10%;
+}
+
+.userPic,
+.compPic {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    height: 80%;
+    border: 3px solid black;
+    border-radius: 50%;
+}
+
+.userPic {
+    left: 25%;
+}
+
+.compPic {
+    left: 75%;
+}
+
+.userPic img,
+.compPic img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 50%;
+}
+
+.compPic img {
+    transform: translate(-50%, -50%) rotateY(180deg);
+}
+
+.matchResult {
+    width: 100%;
+    font-size: 30px;
+}
